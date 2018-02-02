@@ -30,7 +30,7 @@ def self.genre_count
     results = {}
     @@genres.each do |genre|
       if results[genre] == nil
-        results = {genre => 1}
+        results << {genre => 1}
       else
         results[genre] = results.fetch(genre) + 1
       end
