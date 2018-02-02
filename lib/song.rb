@@ -27,17 +27,15 @@ def self.artists
 end
 
 def self.genre_count
-    genre_count_hash = {}
+    results = {}
     @@genres.each do |genre|
-      genre_count_hash << genre
+      if results[genre] == nil then
+        results = {genre => 1}
+      else
+        results[genre].value += 1
+      end
     end
-    #if genre_count_hash[genre] == false
-      #genre_count_hash << {genre => 1}
-    #else
-    #  genre_count_hash[genre].value += 1
-    #end
-  #end
-  genre_count_hash
+    results
 end
 
 end
