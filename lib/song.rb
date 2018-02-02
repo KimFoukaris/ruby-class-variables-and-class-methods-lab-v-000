@@ -32,8 +32,7 @@ def self.genre_count
       if results[genre] == nil then
         results = {genre => 1}
       else
-        value = results.values_at(genre) + 1
-        results[genre] = value
+        results[genre] = 5
       end
     end
     results
