@@ -38,4 +38,16 @@ def self.genre_count
     results
   end
 
+  def self.artist_count
+      results = {}
+      @@artists.each do |artist|
+        if results[artist] == nil
+          results[artist] = 1
+        else
+          results[artist] = results.fetch(artist) + 1
+        end
+      end
+      results
+    end
+
 end
